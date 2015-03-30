@@ -1,0 +1,37 @@
+{
+    "name": "parsekit.io",
+    "version": "0.1.0",
+    "main": "assets/scripts/index.js",
+    "scripts": {
+        "dev": "./node_modules/.bin/webpack-dev-server --progress --colors --port 8090 --content-base=build/ --hot --history-api-fallback",
+        "build": "./node_modules/.bin/webpack --optimize-dedupe --optimize-minimize --optimize-occurence-order --progress --colors",
+        "deploy": "npm run build && gulp deploy",
+        "lint": "eslint --ignore-path .gitignore ."
+    },
+    "author": "Izaak Schroeder",
+    "license": "CC1.0",
+    "repository": {
+        "url": "parsekit/parsekit",
+        "type": "git"
+    },
+    "dependencies": {
+        "lodash": "^3.3.1",
+        "express": "^4.10.6",
+        "react": "^0.12.2",
+        "react-router": "^0.12.4",
+		"parsekit": "parsekit/parsekit"
+    },
+    "devDependencies": {
+        "webpack": "^1.5.3",
+        "jsx-loader": "^0.12.2",
+        "dotenv": "^0.5.1",
+        "html-webpack-plugin": "izaakschroeder/html-webpack-plugin.git#refactor",
+        "autoprefixer-loader": "^1.1.0",
+		"webpack-dev-server": "^1.7.0",
+        "gulp": "^3.8.11",
+		"sass-loader": "izaakschroeder/sass-loader.git#refactor",
+		"style-loader": "^0.8.3",
+		"css-loader": "^0.9.1",
+		"image-webpack-loader": "^1.2.0"
+    }
+}

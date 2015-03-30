@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<title>ParseKit</title>
+	</head>
+	<body>
+		<!--
+			This will be replaced with React code when everything is loaded, so
+			it's just a loader for while we wait.
+		-->
+		<div id="content">
+			<div class="loader">
+				Loading...
+			</div>
+
+			<!-- Obviously. -->
+			<noscript>
+				You need JavaScript enabled to view this site.
+			</noscript>
+		</div>
+
+		<!-- Load all the assets from webpack. -->
+		<% _.forEach(paths, function(path) { %>
+			<script src="<%=path%>"></script>
+		<% }); %>
+	</body>
+</html>
